@@ -3700,9 +3700,10 @@ hatalmas, hogy függvényeinek és metódusainak <a href="https://pandas.pydata.
 dokumentációja érhető el</a>. <strong>Ha egy függvény vagy metódus
 használatakor elakad az ember, érdemes először ebben a dokumentációban
 utána nézni a proglémás cucc működésének!</strong></p>
-<p>Olvassuk be a “<em>covid_19_clean_complete.csv</em>” fájlt, és
-tároljuk le az adatait egy <strong>corona</strong> nevű Pandas data
-frame-ben!</p>
+<p>Olvassuk be a
+<a href="https://github.com/KoLa992/Statisztika-II-Python-Alapok/blob/main/covid_19_clean_complete.csv" target="_blank">covid_19_clean_complete.csv</a>
+fájlt, és tároljuk le az adatait egy <strong>corona</strong> nevű Pandas
+data frame-ben!</p>
 <p>Az adatfájl egy WHO által készített historikus kimutatás a COVID-19
 vírus esetszámairól a Föld országaiban 2020. április 30-cal
 bezárólag.</p>
@@ -3713,6 +3714,9 @@ lehet beolvasni a <code>read_csv</code> függvény segítségével. A
 fájlok, amikben egy táblázat szerepel úgy, hogy az oszlophatárokat
 <strong>vesszők</strong> jelzik! Innen is a név: <em>comma separated
 values = csv</em></p>
+<p><strong>Figyelem!</strong> Az alábbi beolvasó kód csak akkor működik,
+ha a <em>csv</em> fájlt az aktuálisan beállított <strong>Working
+Directory</strong>-ba másoltuk be!!</p>
 <pre class="python"><code>corona = pd.read_csv(&#39;covid_19_clean_complete.csv&#39;)</code></pre>
 <p>A <strong>data frame</strong> logikailag úgy kezelhető, mint egy
 <strong>numpy tömbökből álló lista, de a listaelemeket névvel is tudjuk
@@ -4519,9 +4523,10 @@ eloszlására kell szabni.</p>
 <div id="adatminőségi-problémák-felismerése-és-kezelése-leíró-statisztika-segítségével" class="section level2">
 <h2>10. Adatminőségi problémák felismerése és kezelése leíró statisztika
 segítségével</h2>
-<p>Olvassuk be a “<em>population_by_country_2020.csv</em>” nevű fájlt,
-és mentsük el a beolvasott adatokat egy <strong>population</strong> nevű
-data frame-be!</p>
+<p>Olvassuk be a
+<a href="https://github.com/KoLa992/Statisztika-II-Python-Alapok/blob/main/population_by_country_2020.csv" target="_blank">population_by_country_2020.csv</a>
+nevű fájlt, és mentsük el a beolvasott adatokat egy
+<strong>population</strong> nevű data frame-be!</p>
 <pre class="python"><code>population = pd.read_csv(&#39;population_by_country_2020.csv&#39;)
 population.info()</code></pre>
 <pre><code>## &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
@@ -5186,9 +5191,10 @@ annyi nagyjából az esetszáma, amennyi a városi népesség aránya alapján
 <div id="gyakorló-feladatok" class="section level2">
 <h2>Gyakorló feladatok</h2>
 <ol style="list-style-type: decimal">
-<li>Olvassuk be a “*index_2019_-_pour_import_1_1.csv*” nevű fájlt, és
-mentsük el a beolvasott adatokat egy <strong>PressLiberty</strong> nevű
-data frame-be!
+<li>Olvassuk be az
+<a href="https://github.com/KoLa992/Statisztika-II-Python-Alapok/blob/main/index_2019_-_pour_import_1_1.csv" target="_blank">index_2019_-_pour_import_1_1.csv</a>
+nevű fájlt, és mentsük el a beolvasott adatokat egy
+<strong>PressLiberty</strong> nevű data frame-be!
 <ul>
 <li>Vigyázat! A fájlban tizedesvesszők vannak tizedes pont helyett!
 Használni kell a <code>read_csv</code> függvény <code>decimal</code>

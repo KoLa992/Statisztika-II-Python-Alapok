@@ -752,11 +752,13 @@ Itt is figyeljünk a **névterekre**, amikbe elraktuk a csomagok függvényeit!
 
 Ezen a ponton jegyezném meg, hogy a `pandas` csomag olyan hatalmas, hogy függvényeinek és metódusainak [külön dokumentációja érhető el](https://pandas.pydata.org/docs/reference/index.html). **Ha egy függvény vagy metódus használatakor elakad az ember, érdemes először ebben a dokumentációban utána nézni a proglémás cucc működésének!**
 
-Olvassuk be a "*covid_19_clean_complete.csv*" fájlt, és tároljuk le az adatait egy **corona** nevű Pandas data frame-ben!
+Olvassuk be a <a href="https://github.com/KoLa992/Statisztika-II-Python-Alapok/blob/main/covid_19_clean_complete.csv" target="_blank">covid_19_clean_complete.csv</a> fájlt, és tároljuk le az adatait egy **corona** nevű Pandas data frame-ben!
 
 Az adatfájl egy WHO által készített historikus kimutatás a COVID-19 vírus esetszámairól a Föld országaiban 2020. április 30-cal bezárólag.
 
 A `pandas` data frame-ekbe a legkönnyebben talán **csv** kiterjesztésű állományként tárolt adattáblákat lehet beolvasni a `read_csv` függvény segítségével. A **csv** állományok valójában olyan **txt** fájlok, amikben egy táblázat szerepel úgy, hogy az oszlophatárokat **vesszők** jelzik! Innen is a név: *comma separated values = csv*
+
+**Figyelem!** Az alábbi beolvasó kód csak akkor működik, ha a *csv* fájlt az aktuálisan beállított **Working Directory**-ba másoltuk be!!
 
 ```{python}
 corona = pd.read_csv('covid_19_clean_complete.csv')
@@ -1123,7 +1125,7 @@ corona_country.boxplot(column="COVID_Cases")
 
 ## 10. Adatminőségi problémák felismerése és kezelése leíró statisztika segítségével
 
-Olvassuk be a "*population_by_country_2020.csv*" nevű fájlt, és mentsük el a beolvasott adatokat egy **population** nevű data frame-be!
+Olvassuk be a <a href="https://github.com/KoLa992/Statisztika-II-Python-Alapok/blob/main/population_by_country_2020.csv" target="_blank">population_by_country_2020.csv</a> nevű fájlt, és mentsük el a beolvasott adatokat egy **population** nevű data frame-be!
 
 ```{python}
 population = pd.read_csv('population_by_country_2020.csv')
@@ -1484,7 +1486,7 @@ E voilá: a gyanús kis államunk a magas esetszámával a kis városi népessé
 
 ## Gyakorló feladatok
 
-1. Olvassuk be a "*index_2019_-_pour_import_1_1.csv*" nevű fájlt, és mentsük el a beolvasott adatokat egy **PressLiberty** nevű data frame-be!
+1. Olvassuk be az <a href="https://github.com/KoLa992/Statisztika-II-Python-Alapok/blob/main/index_2019_-_pour_import_1_1.csv" target="_blank">index_2019_-_pour_import_1_1.csv</a> nevű fájlt, és mentsük el a beolvasott adatokat egy **PressLiberty** nevű data frame-be!
     - Vigyázat! A fájlban tizedesvesszők vannak tizedes pont helyett! Használni kell a `read_csv` függvény `decimal` paraméterét! Meg kell a paraméterben adni, hogy a tizedeshelyeket a `','` karakter jelöli!
 2. A **PressLiberty** data frame-ből csak az angol országnév (**EN_country**) és a 2019-es sajtószabadsági index (**Score 2019**) oszlopkra lesz szükségünk. A sajtószabadsági indexben az alacsonyabb érték jelent szabadabb sajtót egy országban. A többi változót töröljuk ki a data frame-ből!
 3. A szűkített **PressLiberty** data frame oszlopainak neve legyen **Country** és **PressLiberty**!
