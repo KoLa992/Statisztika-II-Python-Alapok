@@ -5,7 +5,7 @@ title: |
   </center> 
   Statisztika II. - Python Alapok
 author: "Kovács László"
-date: "2022.07.09."
+date: "2023.02.06."
 output:
   html_document:
     toc: true
@@ -26,13 +26,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ## Előhang
-
-> "Musa! te, ki nem rothadó zöld laurusbul
->  Viseled koszorudat, sem gyönge ágbul,
->  Hanem fényes mennyei szent csillagokbul,
->  Van kötve koronád holdbol és szép napbul;"
->
-> `r tufte::quote_footer('--- Zrínyi Miklós')`
 
 Ez a jegyzet hivatalosan a Budapesti Corvinus Egyetem gazdaságinformatikus hallgatóinak készült abból a célból, hogy a Statisztika II. tárgy sikeres abszolválásához szükséges Python programnyelvi elemek felelevenítésre kerüljenek.
 
@@ -65,7 +58,7 @@ Ezen kívül a jegyzet **feltételez némi leíró statisztikai előismeretet**.
 * eloszlások alakja
 * korreláció és pontdiagram
 
-**Ha** egy lelkes **gazdaságinformatikus hallgató forgatja a jegyzetet**, aki a *Programozás alapjai* tárgyban a Python nyelv és a `pandas` data frame-k alapjait már tökéletesen elsajátította biztosan sok "uncsi" részt fog találni a jegyzetben. Számára leginkább csak a 6-10. fejezetek gyors átprögetését ajánlom, hogy a statisztikai számítások elvégzéséhez és a statisztikai adattáblák kezeléséhez szükséges Python megoldásokat felelevenítse.<br>
+**Ha** egy lelkes **gazdaságinformatikus hallgató forgatja a jegyzetet**, aki a *Programozás alapjai* tárgyban a Python nyelv és a `pandas` data frame-k alapjait már tökéletesen elsajátította biztosan sok "uncsi" részt fog találni a jegyzetben. Számára **leginkább csak a 8-13. fejezetek gyors átprögetését ajánlom**, hogy a statisztikai számítások elvégzéséhez és a statisztikai adattáblák kezeléséhez szükséges Python megoldásokat felelevenítse.<br>
 Ugyanakkor fontos megjegyezenem, hogy a **Statisztika II. tárgy tanóráin a jelen jegyzetben szereplő tudást ismertnek feltételezzük, és nem fogunk rá külön kitérni az oktatás során!!** Szóval, ha valaki **egy kicsit is bizonytalan a Python ismereteiben, azért olvassa át ezt az ismétlő jegyzetet, és ha bármi nem világos, KÉRDEZZEN!!**
 
 
@@ -93,7 +86,7 @@ Talán nem ér minket meglepetésként, ha azt mondom, hogy a *statisztikai szá
 
 ## 2. A Pythonról általában
 
-Az Python a jegyzet írásakor a legnépszerűbb általános célú programozási nyelv, 2022 júniusában a [TIOBE index](https://www.tiobe.com/tiobe-index/) alapján a legtöbb sor programkódot Python nyelven írják a fejlesztők.
+Az Python a jegyzet írásakor a legnépszerűbb általános célú programozási nyelv, 2023 februárjában a [TIOBE index](https://www.tiobe.com/tiobe-index/) alapján a legtöbb sor programkódot Python nyelven írják a fejlesztők.
 
 A mi szempontunkból a Python olyan szempontból vonzó, hogy a külső kiegészítő csomagjai segítségével a valószínűségszámítás, statisztika és általánosabb adatelemzés műveletei könnyen és gyorsan elvégezhetők a segítségével. Tehát a Python használható olyan matematikai, statisztikai modellezési és elemzési feladatok elvégzésére alkalmas szkriptnyelvként, mint például az [R](https://cran.r-project.org/) vagy a [Matlab](https://www.mathworks.com/products/matlab.html). A Python előnye ezekkel a nyelvekkel szemben, hogy mivel általános célú programnyelv, így a matematiaki-statisztikai számítások eredményei sokkal könnyebben integrálhatók egy üzleti célú alkalmazásba, ami mondjuk felhasználói felülettel rendelkezik.<br>
 Ahogy az *Előhang*ban már jeleztem, a jegyzet kimondottan a Python statisztikai és adatelemzési funkcióinak alapszintű bemutatásával foglalkozik. Tehát alkalmazást fejleszteni itt nem fogunk, a Pythont szkriptnyelvként működtetjük: elküldjük a programkódban megírt számítási igényeinket a gépállatnak, és az visszaköpi a számítások eredményeit a képernyőre, és mi egyrészt gyönyörködünk bennük, másrészt értelmezzük az eredményeket. Viszont, jó tudni, hogy a Python az eredmények további felhasználására is képes programnyelv. Ebben több, mint egy matematikusi körökban szintén népszerű R vagy Matlab. Hátránya a felsorolt nyelvekkel szemben, hogy mivel általános célú programnyelv, és nem kimondottan a matematikai-statisztikai számításokra optimalizált, így számos számítás lekódolása sokkal körülményesebb Pythonban, mint R-ben vagy Matlabban. De hát *valamit valamiért*. :)
@@ -223,7 +216,7 @@ szoveg = "Hello There!" # Figyeljünk rá, hogy szöveget a kódban csak idéző
 type(szoveg)
 
 igazhamis = True
-type(igazhamis) # # a bool típusnak csak két értéke lehet: True vagy False
+type(igazhamis) # a bool típusnak csak két értéke lehet: True vagy False
 ```
 
 A fenti kódrészletben szereplő **#** jel a komment jele a Pythonban. A **#** mögötti részeket a gépállat nem fogja végrehajtani, olyan lesz neki, mintha ott sem lenne. Ezzel magunknak írhatunk a Python szkriptbe hasznos megjegyzéseket.
