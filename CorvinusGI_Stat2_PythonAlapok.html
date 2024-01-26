@@ -2644,8 +2644,8 @@ pre code {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -2653,16 +2653,9 @@ pre code {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -2785,7 +2778,7 @@ div.tocify {
 </center>
 <p>Statisztika II. - Python Alapok</p></h1>
 <h4 class="author">Kovács László</h4>
-<h4 class="date">2023.02.06.</h4>
+<h4 class="date">2024.01.26.</h4>
 
 </div>
 
@@ -2872,8 +2865,8 @@ jegyzetet, és ha bármi nem világos, KÉRDEZZEN!!</strong></p>
 </div>
 <div id="programozási-alapelvek" class="section level2">
 <h2>1. Programozási alapelvek</h2>
-<p>Mivel az R egy programnyelv, így elengedhetetlen, hogy a használata
-előtt némi programozási alapvetésekkel tisztában legyünk.</p>
+<p>Mivel a Python egy programnyelv, így elengedhetetlen, hogy a
+használata előtt némi programozási alapvetésekkel tisztában legyünk.</p>
 <p>Talán az már kijelenthetó, hogy közismert a tény, mi szerint a mai
 számítógépek alapvetően a Neumann-elvek szerint működnek.</p>
 <p>A mi szempontunkból ez csak annyit jelent, hogy a számítógépet
@@ -2911,7 +2904,7 @@ oszloppal = változóval rendelkezik).</p>
 <div id="a-pythonról-általában" class="section level2">
 <h2>2. A Pythonról általában</h2>
 <p>Az Python a jegyzet írásakor a legnépszerűbb általános célú
-programozási nyelv, 2023 februárjában a <a href="https://www.tiobe.com/tiobe-index/">TIOBE index</a> alapján a
+programozási nyelv, 2024 januárjában a <a href="https://www.tiobe.com/tiobe-index/">TIOBE index</a> alapján a
 legtöbb sor programkódot Python nyelven írják a fejlesztők.</p>
 <p>A mi szempontunkból a Python olyan szempontból vonzó, hogy a külső
 kiegészítő csomagjai segítségével a valószínűségszámítás, statisztika és
@@ -3146,11 +3139,11 @@ tizedes vesszővel írt számot nem fogja felismerni, és hisztis
 hibaüzenetet dob. :( A <code>nemjo</code> változó pedig nem jön létre a
 memóriában.</p>
 <pre class="python"><code>nemjo = float(&quot;3,14&quot;)</code></pre>
-<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): ValueError: could not convert string to float: &#39;3,14&#39;</code></pre>
+<pre><code>## could not convert string to float: &#39;3,14&#39;</code></pre>
 <pre class="python"><code>nemjo</code></pre>
-<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): NameError: name &#39;nemjo&#39; is not defined</code></pre>
+<pre><code>## name &#39;nemjo&#39; is not defined</code></pre>
 <pre class="python"><code>type(nemjo)</code></pre>
-<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): NameError: name &#39;nemjo&#39; is not defined</code></pre>
+<pre><code>## name &#39;nemjo&#39; is not defined</code></pre>
 <p>De ha a törtszám tizedes ponttal adott a string változóban, akkor az
 minden további nélkül <code>float</code> adattípusra konvertálható.</p>
 <pre class="python"><code>jo = float(&quot;3.14&quot;)
@@ -3182,7 +3175,7 @@ mutat: a stringet összefűzi annyiszor amennyi az integer típusú változó
 szam = 4
 
 szoveg+szam</code></pre>
-<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): TypeError: can only concatenate str (not &quot;int&quot;) to str</code></pre>
+<pre><code>## can only concatenate str (not &quot;int&quot;) to str</code></pre>
 <pre class="python"><code>szoveg*szam</code></pre>
 <pre><code>## &#39;3333&#39;</code></pre>
 <p>Érdemes megnézni mi történik, ha egy stringként tárolt egész számot
@@ -3212,13 +3205,13 @@ függvénnyel, és ezekben a csillagálásokban hibát dob a pitonállat.</p>
 szam = 4
 
 szoveg+szam</code></pre>
-<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): TypeError: can only concatenate str (not &quot;int&quot;) to str</code></pre>
+<pre><code>## can only concatenate str (not &quot;int&quot;) to str</code></pre>
 <pre class="python"><code>szoveg*szam</code></pre>
 <pre><code>## &#39;3.53.53.53.5&#39;</code></pre>
 <pre class="python"><code>int(szoveg)+szam</code></pre>
-<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): ValueError: invalid literal for int() with base 10: &#39;3.5&#39;</code></pre>
+<pre><code>## invalid literal for int() with base 10: &#39;3.5&#39;</code></pre>
 <pre class="python"><code>int(szoveg)*szam</code></pre>
-<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): ValueError: invalid literal for int() with base 10: &#39;3.5&#39;</code></pre>
+<pre><code>## invalid literal for int() with base 10: &#39;3.5&#39;</code></pre>
 <pre class="python"><code>float(szoveg)+szam</code></pre>
 <pre><code>## 7.5</code></pre>
 <pre class="python"><code>float(szoveg)*szam</code></pre>
@@ -3230,7 +3223,7 @@ kell konvertálni.</p>
 szam = 4
 
 szoveg+szam</code></pre>
-<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): TypeError: can only concatenate str (not &quot;int&quot;) to str</code></pre>
+<pre><code>## can only concatenate str (not &quot;int&quot;) to str</code></pre>
 <pre class="python"><code>szoveg*szam</code></pre>
 <pre><code>## &#39;3.53.53.53.5&#39;</code></pre>
 <pre class="python"><code>int(float(szoveg))+szam</code></pre>
@@ -3369,7 +3362,7 @@ számértéket jelölő adattípusok (<code>int</code> és <code>float</code>),
 akkor a rendezés vége egy szép kis hibaüzenet lesz.</p>
 <pre class="python"><code>sokszam_sokszoveg = [88, 42, &quot;Hello&quot;, 1992, 9, &quot;There&quot;, &quot;Friend&quot;, 11]
 sokszam_sokszoveg.sort()</code></pre>
-<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): TypeError: &#39;&lt;&#39; not supported between instances of &#39;str&#39; and &#39;int&#39;</code></pre>
+<pre><code>## &#39;&lt;&#39; not supported between instances of &#39;str&#39; and &#39;int&#39;</code></pre>
 <p>Na ezt a rendezősdit vegyes adattípusokon már tényleg nem érti a
 gépállat!<br> Tanulság: rendezés esetén nem iszunk kevertet! :)</p>
 <p>Nézzük meg hogyan tudunk több, mint 1 elemet kiválasztani a
@@ -3388,7 +3381,7 @@ kell megadni.</p>
 <p>A hecc kedvéért nézzük meg mit ad vissza gépállat, ha nem létező
 elemet kérünk le.</p>
 <pre class="python"><code>sokszam_sokszoveg[9]</code></pre>
-<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): IndexError: list index out of range</code></pre>
+<pre><code>## list index out of range</code></pre>
 <p>Csak, hogy emlékezzünk arra, hogy az
 <code>IndexError: list index out of range</code> hibaüzenet nem létező
 listelem kiválasztását jelenti. :)</p>
@@ -3414,7 +3407,7 @@ Laci</code></pre>
 <pre><code>## &lt;class &#39;dict&#39;&gt;</code></pre>
 <p>Kérjük le a 2. elemet a szótárból.</p>
 <pre class="python"><code>Laci[1]</code></pre>
-<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): KeyError: 1</code></pre>
+<pre><code>## 1</code></pre>
 <p>Teljesen jogosan nyávog a pitonkénk, hogy ezt nem érti, hiszen itt a
 2. elem nem értelmezhető, mivel nem sorszámmal azonosíthatók a szótár
 elemei.</p>
@@ -4094,7 +4087,7 @@ első sor az az eredetiben a 17561-ik, így ezzel tudom kiválasztani, ha a
 pedig az eredeti data frame-ből örökölt index az ő kifacsart
 géplogikájában:</p>
 <pre class="python"><code>szűrttészta.loc[0,:]</code></pre>
-<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): KeyError: 0</code></pre>
+<pre><code>## 0</code></pre>
 <pre class="python"><code>szűrttészta.loc[17561,:]</code></pre>
 <pre><code>## Country/Region                  Italy
 ## Date              2020-03-28 00:00:00

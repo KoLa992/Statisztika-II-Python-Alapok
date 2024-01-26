@@ -5,7 +5,7 @@ title: |
   </center> 
   Statisztika II. - Python Alapok
 author: "Kovács László"
-date: "2023.02.06."
+date: "2024.01.26."
 output:
   html_document:
     toc: true
@@ -65,7 +65,7 @@ Ugyanakkor fontos megjegyezenem, hogy a **Statisztika II. tárgy tanóráin a je
 
 ## 1. Programozási alapelvek
 
-Mivel az R egy programnyelv, így elengedhetetlen, hogy a használata előtt némi programozási alapvetésekkel tisztában legyünk.
+Mivel a Python egy programnyelv, így elengedhetetlen, hogy a használata előtt némi programozási alapvetésekkel tisztában legyünk.
 
 Talán az már kijelenthetó, hogy közismert a tény, mi szerint a mai számítógépek alapvetően a Neumann-elvek szerint működnek.
 
@@ -86,7 +86,7 @@ Talán nem ér minket meglepetésként, ha azt mondom, hogy a *statisztikai szá
 
 ## 2. A Pythonról általában
 
-Az Python a jegyzet írásakor a legnépszerűbb általános célú programozási nyelv, 2023 februárjában a [TIOBE index](https://www.tiobe.com/tiobe-index/) alapján a legtöbb sor programkódot Python nyelven írják a fejlesztők.
+Az Python a jegyzet írásakor a legnépszerűbb általános célú programozási nyelv, 2024 januárjában a [TIOBE index](https://www.tiobe.com/tiobe-index/) alapján a legtöbb sor programkódot Python nyelven írják a fejlesztők.
 
 A mi szempontunkból a Python olyan szempontból vonzó, hogy a külső kiegészítő csomagjai segítségével a valószínűségszámítás, statisztika és általánosabb adatelemzés műveletei könnyen és gyorsan elvégezhetők a segítségével. Tehát a Python használható olyan matematikai, statisztikai modellezési és elemzési feladatok elvégzésére alkalmas szkriptnyelvként, mint például az [R](https://cran.r-project.org/) vagy a [Matlab](https://www.mathworks.com/products/matlab.html). A Python előnye ezekkel a nyelvekkel szemben, hogy mivel általános célú programnyelv, így a matematiaki-statisztikai számítások eredményei sokkal könnyebben integrálhatók egy üzleti célú alkalmazásba, ami mondjuk felhasználói felülettel rendelkezik.<br>
 Ahogy az *Előhang*ban már jeleztem, a jegyzet kimondottan a Python statisztikai és adatelemzési funkcióinak alapszintű bemutatásával foglalkozik. Tehát alkalmazást fejleszteni itt nem fogunk, a Pythont szkriptnyelvként működtetjük: elküldjük a programkódban megírt számítási igényeinket a gépállatnak, és az visszaköpi a számítások eredményeit a képernyőre, és mi egyrészt gyönyörködünk bennük, másrészt értelmezzük az eredményeket. Viszont, jó tudni, hogy a Python az eredmények további felhasználására is képes programnyelv. Ebben több, mint egy matematikusi körökban szintén népszerű R vagy Matlab. Hátránya a felsorolt nyelvekkel szemben, hogy mivel általános célú programnyelv, és nem kimondottan a matematikai-statisztikai számításokra optimalizált, így számos számítás lekódolása sokkal körülményesebb Pythonban, mint R-ben vagy Matlabban. De hát *valamit valamiért*. :)
