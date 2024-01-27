@@ -36,7 +36,7 @@ Ebből adódóan szeretném kicsit tételesen összefoglalni, hogy mire számít
 A jegyzet **bemutatja**:
 
 * A Python nyelv legalapvetőbb utasításait és elemeit.
-* A Python nyelv statisztikai-adatelemzési feladatok megoldására könnyen hazsnálható adatszerkezeteit (`numpy` és `pandas` csomagok).
+* A Python nyelv statisztikai-adatelemzési feladatok megoldására könnyen használható adatszerkezeteit (`numpy` és `pandas` csomagok).
 * A Python nyelv legalapvetőbb adatvizualizációs képességeit a `matplotlib` csomagon keresztül.
 * Egy egyszerűbb, leíró statisztikai és *nem* modellezési célú adatelemzési folyamatban felmerülő leggyakoribb adatminőségi problémák azonosítási és megoldási módjait Python nyelven
 * A *Spyder* fejlesztőkörnyezet működését és lehetőségeit adatelemzési feladatok megoldása során.
@@ -1465,7 +1465,7 @@ for sorszám, szöveg in enumerate(corona_extended.Country):
 
 És ez így folytatódik tovább a data frame összes sorára, csak most ide nem íratom ki a több mint 100 értéket. :)
 
-Na, ezt az `enumerate`-t használó `for` ciklust úgy hazsnpsítjuk, hogy először egy külön `fig` című objektumba elmentjk az alap pontdiagramos ábrát, amit az előbb is megcsináltunk.<br>
+Na, ezt az `enumerate`-t használó `for` ciklust úgy hasznosítjuk, hogy először egy külön `fig` című objektumba elmentjk az alap pontdiagramos ábrát, amit az előbb is megcsináltunk.<br>
 Aztán elindítjuk ezt a `for` ciklust az `enumerate` alapján, és a cikluson belül használjuk a `fig` objektum `annotate` metódusát, ami a pontok feliratozását valósítja meg. A metódus paramétereiben megadom először, hogy az aktuális `szöveg`-et, azaz az országnevet rakja fel, mint felirat.<br>
 A következő paraméter, ami zárójelben van az csak optikai tuning. Ott azt csinálom, hogy az $x,y$ koordinátáknak megfelelő oszlopok konkrét, pontdiagramon lévő koordinátáit kérdezem le az oszlopok `iat` tulajdonságában. Ez két lista, így mindig a *sorszámadik* elemét nézem a cikluson belül. Ezen koordináták közül a diagram $x$ tengelyét adó **UrbanPop**-ét eltolom $0.05$-tel. Így a pont felirata nem a pont középpontjában kezdődik, hanem attól $0.05$ egységgel jobbra. Így olvashatóbb lesz a cucc. :) Nyilván a felirat $y$ koordinátáját is tudnám itt szabályozni, és kedvem szerint fel-le rakni a felirat kezdőpontját, de erre itt nincs szükség, így az `annotate` paraméterben ezt a koordinátát csak csak változatlanul átadom.
 
