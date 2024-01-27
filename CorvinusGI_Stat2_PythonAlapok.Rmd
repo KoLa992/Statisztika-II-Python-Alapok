@@ -5,7 +5,7 @@ title: |
   </center> 
   Statisztika II. - Python Alapok
 author: "Kovács László"
-date: "2024.01.26."
+date: "2024.01.27."
 output:
   html_document:
     toc: true
@@ -71,8 +71,8 @@ Talán az már kijelenthetó, hogy közismert a tény, mi szerint a mai számít
 
 A mi szempontunkból ez csak annyit jelent, hogy a számítógépet alapvetően *utasítások* végrehajtására használjuk programozás során: pl. számold ki ezt, vagy rajzold ki amazt. A programozás kihívása, hogy a gépállat felfogása nagyon nehéz, ezért az utasításokat nagyon konkrétan meg kell neki fogalmazni. Ehhez a megfogalmazáshoz adnak segítséget a különböző programnyelvek, így a Python is.
 
-A Neumann-elvek szerint a programnyelven kiadott utasításokat a számítógépben a *processzor* (Central Processing Unit, CPU) hajtja végre. Ugyanakkor az utasítások végrehajtásához a gépnek adatokat is fejben kellhet tartania (mondjuk átlag számítás során nem állt tudnia milyen számok átlagát számoljuk ki). Ezeket az adatokat nem meglepő módon a *memóriájában* (Random Access Memory, RAM) tárolja a gép.
-A gépállattal való kommunikációhoz szükségvan valami beviteli = input eszközre (billentyűzet, egér) és az utasítások eredményének megjelenítéséhez kell egy kimieneti = output eszköz (monitor) is.
+A Neumann-elvek szerint a programnyelven kiadott utasításokat a számítógépben a *processzor* (Central Processing Unit, CPU) hajtja végre. Ugyanakkor az utasítások végrehajtásához a gépnek adatokat is fejben kellhet tartania (mondjuk átlag számítás során nem árt tudnia milyen számok átlagát számoljuk ki). Ezeket az adatokat nem meglepő módon a *memóriájában* (Random Access Memory, RAM) tárolja a gép.
+A gépállattal való kommunikációhoz szükségvan valami beviteli = input eszközre (billentyűzet, egér) és az utasítások eredményének megjelenítéséhez kell egy kimeneti = output eszköz (monitor) is.
 
 És...ennyi! Alapvetően a modern számítógépek ennyi alkotóelemből állnak (a háttértár programozás szempontjából irreleváns).
 Mindez egy cuki ábrán (a processzor belső felépítése minket jelenleg nem érdekel):
@@ -88,8 +88,8 @@ Talán nem ér minket meglepetésként, ha azt mondom, hogy a *statisztikai szá
 
 Az Python a jegyzet írásakor a legnépszerűbb általános célú programozási nyelv, 2024 januárjában a [TIOBE index](https://www.tiobe.com/tiobe-index/) alapján a legtöbb sor programkódot Python nyelven írják a fejlesztők.
 
-A mi szempontunkból a Python olyan szempontból vonzó, hogy a külső kiegészítő csomagjai segítségével a valószínűségszámítás, statisztika és általánosabb adatelemzés műveletei könnyen és gyorsan elvégezhetők a segítségével. Tehát a Python használható olyan matematikai, statisztikai modellezési és elemzési feladatok elvégzésére alkalmas szkriptnyelvként, mint például az [R](https://cran.r-project.org/) vagy a [Matlab](https://www.mathworks.com/products/matlab.html). A Python előnye ezekkel a nyelvekkel szemben, hogy mivel általános célú programnyelv, így a matematiaki-statisztikai számítások eredményei sokkal könnyebben integrálhatók egy üzleti célú alkalmazásba, ami mondjuk felhasználói felülettel rendelkezik.<br>
-Ahogy az *Előhang*ban már jeleztem, a jegyzet kimondottan a Python statisztikai és adatelemzési funkcióinak alapszintű bemutatásával foglalkozik. Tehát alkalmazást fejleszteni itt nem fogunk, a Pythont szkriptnyelvként működtetjük: elküldjük a programkódban megírt számítási igényeinket a gépállatnak, és az visszaköpi a számítások eredményeit a képernyőre, és mi egyrészt gyönyörködünk bennük, másrészt értelmezzük az eredményeket. Viszont, jó tudni, hogy a Python az eredmények további felhasználására is képes programnyelv. Ebben több, mint egy matematikusi körökban szintén népszerű R vagy Matlab. Hátránya a felsorolt nyelvekkel szemben, hogy mivel általános célú programnyelv, és nem kimondottan a matematikai-statisztikai számításokra optimalizált, így számos számítás lekódolása sokkal körülményesebb Pythonban, mint R-ben vagy Matlabban. De hát *valamit valamiért*. :)
+A mi szempontunkból a Python olyan szempontból vonzó, hogy a külső kiegészítő csomagjai segítségével a valószínűségszámítás, statisztika és általánosabb adatelemzés műveletei könnyen és gyorsan elvégezhetők a segítségével. Tehát a Python használható olyan matematikai, statisztikai modellezési és elemzési feladatok elvégzésére alkalmas szkriptnyelvként, mint például az [R](https://cran.r-project.org/) vagy a [Matlab](https://www.mathworks.com/products/matlab.html). A Python előnye ezekkel a nyelvekkel szemben, hogy mivel általános célú programnyelv, így a matematikai-statisztikai számítások eredményei sokkal könnyebben integrálhatók egy üzleti célú alkalmazásba, ami mondjuk felhasználói felülettel rendelkezik.<br>
+Ahogy az *Előhang*ban már jeleztem, a jegyzet kimondottan a Python statisztikai és adatelemzési funkcióinak alapszintű bemutatásával foglalkozik. Tehát alkalmazást fejleszteni itt nem fogunk, a Pythont szkriptnyelvként működtetjük: elküldjük a programkódban megírt számítási igényeinket a gépállatnak, és az visszaköpi a számítások eredményeit a képernyőre, és mi egyrészt gyönyörködünk bennük, másrészt értelmezzük az eredményeket. Viszont, jó tudni, hogy a Python az eredmények további felhasználására is képes programnyelv. Ebben több, mint egy matematikusi körökben szintén népszerű R vagy Matlab. Hátránya a felsorolt nyelvekkel szemben, hogy mivel általános célú programnyelv, és nem kimondottan a matematikai-statisztikai számításokra optimalizált, így számos számítás lekódolása sokkal körülményesebb Pythonban, mint R-ben vagy Matlabban. De hát *valamit valamiért*. :)
 
 A Pythont, mi az **Anaconda keretrendszer**ből működtetjük, ami [innen letölthető](https://www.anaconda.com/products/distribution). Az Anaconda számos fejlesztőkörnyezetet biztosít a Python nyelvhez. Itt megjegyzendő, hogy a **Python és a Python fejlesztőkörnyezete nem összekeverendő!** A Python maga a programnyelv, amiben kódot írunk a számítógépünknek, hogy hajtsa végre, míg a fejlesztőkrönyezet az a program, amiben ezt a kódot megírjuk!<br>
 Mi a Python kódjainkat **Spyder fejlesztőkörnyezetben** írjuk majd, mivel ez a fejlesztőkörnyezet az, ami leginkább a Python matematikai-statisztikai műveleteket végrehajtó, szkriptnyelv-szerű használatára van optimalizálva.
@@ -157,10 +157,10 @@ A művelet videón:
 ## 4. Working Directory
 
 Mielőtt belevágunk a Python mélyebb rejtelmeibe van még egy fontos dolog, amiről még szót kell ejteni: a *Working Directory* kérdéséről.
-A *Working Directory* az a mappa, amhonnan a *pitonállat* alapértelmezés szerint minden fájlt innen akar a memóriába tölteni és ide akar visszaírni.
+A *Working Directory* az a mappa, ahonnan a *pitonállat* alapértelmezés szerint minden fájlt innen akar a memóriába tölteni és ide akar visszaírni.
 A Spyder jobb felső sarkában lévő részen lehet kiválasztani és beállítani, hogy melyik mappa legyen a *Working Directory*. Ezek után **minden fájlunk alapból ide fog mentődni, és minden adattáblát ide rakjunk be, amivel majd a Pythonban dolgozni akarunk!**
 
-A Spyder-ben alapértelmezett *Working Directory*-t is be tudunk állítani, ha elbandukolunk a **Tools --> Preferences --> Current working directory** menübe, és ott a **Console dierectory / The following directory** című résznél beállítjuk a kívánt fix mappát alapértelmezett *Working Directory*-nak.
+A Spyder-ben alapértelmezett *Working Directory*-t is be tudunk állítani, ha elbandukolunk a **Tools --> Preferences --> Current working directory** menübe, és ott a **Console directory / The following directory** című résznél beállítjuk a kívánt fix mappát alapértelmezett *Working Directory*-nak.
 
 Az egész alapértelmezett *Working Directory*-val kapcsolatos okfejtés működésben megnézhető a következő videón:
 
@@ -279,7 +279,7 @@ szoveg2 = "There"
 szoveg1+szoveg2
 ```
 
-Viszont a string és integer összege nem értelmezhető, így hiabüzi lesz a vége...mily meglepő :)<br>
+Viszont a string és integer összege nem értelmezhető, így hibaüzi lesz a vége...mily meglepő :)<br>
 Ellenben a szorzatuk értelmes eredményt mutat: a stringet összefűzi annyiszor amennyi az integer típusú változó értéke!
 
 ```{python, error=TRUE, include=TRUE}
@@ -345,13 +345,13 @@ sokszam = [3.14, 2.71, 88, 1234]
 type(sokszam)
 ```
 
-Írassuk ki a teljes listát egyben az oututra!
+Írassuk ki a teljes listát egyben az outputra!
 
 ```{python}
 sokszam
 ```
 
-Kérjük le a lista $1.$ és $3.$ elemeit! Egy elemet a listából a sorszámával tudunk kinyerni, ha ezt a sorszámot `[]` zárójelek között megadjuk. Ugyanakkor figyeljünk, hogy a Pitonállat $0$-tól indexszel! Azaz, az 1. elem a 0.; 2. az 1.; 3. a 2. és stb.
+Kérjük le a lista $1.$ és $3.$ elemeit! Egy elemet a listából a sorszámával tudunk kinyerni, ha ezt a sorszámot `[]` zárójelek között megadjuk. Ugyanakkor figyeljünk, hogy a Pitonállat $0$-tól indexel! Azaz, az 1. elem a 0.; 2. az 1.; 3. a 2. és stb.
 
 ```{python}
 sokszam[0]
@@ -382,7 +382,7 @@ Kérjük le, hogy egy lista hány elemet tartalmaz. Ezt a `len` nevű függvény
 len(sokszam_sokszoveg)
 ```
 
-8 elemú a lista, szupszi!
+8 elemű a lista, szupszi!
 
 Viszont, ezt az elemszám lekérdezést meg lehet oldani úgynevezett **metódus** segítségével is! A **metódusok olyan függvények, amik egy konkrét memóriában élő objektumon hajtanak végre műveleteket**. Ez a spéci logika a Python nyelvben úgy jelenik meg, hogy **nem azt mondjuk**, hogy $f(x)$ módon végrehajtom az $f$ műveletet az $x$ objektumon. Mint ahogy a `len(sokszam_sokszoveg)` is működik, **hanem úgy gondolkodunk, hogy $x.f()$ módon végrehajtjuk az $x$ objektumon az $f$ műveletet.<br>
 Ez a gyakorlatban a `sokszam_sokszoveg` nevű lista elemszámának lekérdezésénél az alábbi módon működik.
@@ -428,7 +428,7 @@ sokszam
 ```
 
 Oké, ez működik! :) Azt, hogy egy metódusnak vagy általános függvénynek milyen paraméterei vannak, azt pl. a Python nyelv [w3schools-on található online dokumentációjából](https://www.w3schools.com/python/ref_list_sort.asp) lehet kideríteni. Itt a metódus/függvény nevére kell rákeresni.<br>
-Szép szóval azt szokás mondani, hogy a dokumentáció megadja, hogy az egyes R függvényeket milyen milyen paraméterezéssel lehet *meghívni*.
+Szép szóval azt szokás mondani, hogy a dokumentáció megadja, hogy az egyes Python függvényeket milyen paraméterezéssel (más néven argumentumokkal) lehet *meghívni*.
 
 A sorbarendezés működik csak stringeket tartalmazó listára is.
 
@@ -470,11 +470,11 @@ Csak, hogy emlékezzünk arra, hogy az `IndexError: list index out of range` hib
 
 #### 5.2.2. A Python `Dictionary`
 
-A Python `Dictionary` típusú (`dict`) objektuma nemes egyszerűséggel egy olyan `list`, amiben **szöveges kulcsokkal és nem sorszámal indexszeljük a listaelemeket**.
+A Python `Dictionary` típusú (`dict`) objektuma nemes egyszerűséggel egy olyan `list`, amiben **szöveges kulcsokkal és nem sorszámmal indexeljük a listaelemeket**.
 
 Létrehozni az értékek és a szöveges azonosítók (azaz kulcsok) megadásával tudjuk `"kulcs" : "érték"` módon `{}` zárójelek között.
 
-Hozzunk létre egy `Laci` nevű `dict`-et, ami tartalmazza Laci 3 elgofntosabb ismérvét: vezeték- és keresztnevét, valamint születési évét.
+Hozzunk létre egy `Laci` nevű `dict`-et, ami tartalmazza Laci 3 legfontosabb ismérvét: vezeték- és keresztnevét, valamint születési évét.
 
 ```{python}
 Laci = {"vezetek": "Kovács",
@@ -520,7 +520,7 @@ Külső csomagokat a Pythonhoz a `pip install` utasítás segítségével tudunk
 pip install numpy
 ```
 
-Ezt a **fenti kódot csak egszer kell lefutatni**, utána a Python mindig **emlékezni fog van már neki egy `numpy` névre hallgató kiegészítő csomagja**.
+Ezt a **fenti kódot csak egyszer kell lefutatni**, utána a Python mindig **emlékezni fog van már neki egy `numpy` névre hallgató kiegészítő csomagja**.
 
 Viszont, a **következő kódot mindig futtassuk le mielőtt egy kódban a `numpy` csomagot használni akarjuk!**
 
@@ -549,7 +549,7 @@ type(tömböcske)
 tömböcske
 ```
 
-Az elemek kiválasztása szerencsénkre ugyan úgy meg, mint `list`-ben.
+Az elemek kiválasztása szerencsénkre ugyanúgy megy, mint `list`-ben.
 
 Pl. az első és negyedik elemek lekérdezése az alábbi.
 
@@ -715,7 +715,7 @@ for aktualis_index in range(elemszám):
 
 ```
 
-De remélem érezzük, hogy ez kellően körülményes megoldás ahhoz képest, mintha közvetlenül a tömböt hárnánk be a ciklussal. :)
+De remélem érezzük, hogy ez kellően körülményes megoldás ahhoz képest, mintha közvetlenül a tömböt járnánk be a ciklussal. :)
 
 ## 7. A Pandas data frame objektum
 
@@ -786,7 +786,7 @@ Itt tehát úgy néz ki, hogy *egy sor = egy földrajzi alrégió (mivel a Provi
 
 Az `info` metódus eredményéből viszont látszik az is, hogy a **Province/State** oszlopban csak $8000$ nem *null* (hiányzó érték) bejegyzés (azaz sor) van! Ez amiatt lehet, mert a kisebb országokat nem bontották szét az adatgyűjtők a WHO-nál alrégiókra, és így ezeknél az országoknál a **Province/State** oszlopot üresen hagyták.
 
-Ami az `info` metódus eredményéből még érdekes, hogy a **string adattípust a `pandas` data frame `object`-nek hívja!** Ehhez hozzá kell szokni. :) Onnan jön az elenevezés, hogy általános programnyelvekben az `object` a legáltalánosabb adattípus, adatelemzésben pedig a legáltalánosabb mérési skála, amire mindent át lehet konvertálni az a szöveges adatok (*stringek*) nominális mérési skálája.
+Ami az `info` metódus eredményéből még érdekes, hogy a **string adattípust a `pandas` data frame `object`-nek hívja!** Ehhez hozzá kell szokni. :) Onnan jön az elnevezés, hogy általános programnyelvekben az `object` a legáltalánosabb adattípus, adatelemzésben pedig a legáltalánosabb mérési skála, amire mindent át lehet konvertálni az a szöveges adatok (*stringek*) nominális mérési skálája.
 
 Nézzük meg a betöltött *adattábla = data frame* első pár rekordját A `head` metódusával. Alapból az első 5 sort írja ki.
 
@@ -821,7 +821,7 @@ Egy-egy konkrét oszlopot, mint *property* is ki tudunk választani a nevén ker
 corona.Confirmed
 ```
 
-De az is működik, ha azt mondjuk, hogy a data frame nem más, mint egy Dicionary, aminek az elemei `numpy` tömbök, és kiválasztjuk az elemet a listából a nevén (oszlopnév) keresztül.
+De az is működik, ha azt mondjuk, hogy a data frame nem más, mint egy Dictionary, aminek az elemei `numpy` tömbök, és kiválasztjuk az elemet a listából a nevén (oszlopnév) keresztül.
 
 ```{python}
 corona["Confirmed"]
@@ -833,7 +833,7 @@ Itt jegyzem meg, hogy a `pandas` egy-egy oszlop adattípusát nem `numpy` tömbn
 type(corona.Confirmed)
 ```
 
-Ha egy konkrét elem, pl. a 19000. sor érrtéke érdekel minket, akkor azt a megfelelő oszlop kiválasztása után szintén []-vel tudjuk kikeresni, hiszen a kiválasztott oszlop maga egy `numpy` tömbként kezelhető `Series`, mint láttuk korábban.
+Ha egy konkrét elem, pl. a 19000. sor értéke érdekel minket, akkor azt a megfelelő oszlop kiválasztása után szintén []-vel tudjuk kikeresni, hiszen a kiválasztott oszlop maga egy `numpy` tömbként kezelhető `Series`, mint láttuk korábban.
 
 ```{python}
 corona.Confirmed[19000-1]
@@ -923,7 +923,7 @@ szűrttészta = corona.loc[corona.Deaths > 10000, ["Country/Region", "Date"]]
 szűrttészta.info()
 ```
 
-Vigyázzunk a sorindexek, még az eredeti data frame-ből jönnek. Pl. az első sor az az eredetiben a 17561-ik, így ezzel tudom kiválasztani, ha a `loc`-ot hazsnálom, mert ez a sorokat is a **nevükkel** azonosítja, mint az oszlopokat. A sor "neve", pedig az eredeti data frame-ből örökölt index az ő kifacsart géplogikájában:
+Vigyázzunk a sorindexek, még az eredeti data frame-ből jönnek. Pl. az első sor az az eredetiben a 17561-ik, így ezzel tudom kiválasztani, ha a `loc`-ot használom, mert ez a sorokat is a **nevükkel** azonosítja, mint az oszlopokat. A sor "neve", pedig az eredeti data frame-ből örökölt index az ő kifacsart géplogikájában:
 
 ```{python, error=TRUE, include=TRUE}
 szűrttészta.loc[0,:]
@@ -1044,7 +1044,7 @@ corona_country.head()
 
 Az eredmény nem egy data frame, hanem mint láthatjuk egy `Series` lett, ami ugyebár logikailag egy `numpy` tömb! Mivel a `groupby` során az országok nevéből lett az új sorindex, így csak 1 oszlopunk maradt, az összegzett megerősített esetszám.
 
-Ha azt szeretnénk, hogy a **corona_country**-ben az országok neve ne indexként, hanem külön oszlopként szerepeljen! Használjuk a reset_index() függvény!
+Ha azt szeretnénk, hogy a **corona_country**-ben az országok neve ne indexként, hanem külön oszlopként szerepeljen, akkor használjuk a `reset_index()` metódust!
 
 ```{python}
 corona_country = corona_country.reset_index()
@@ -1071,7 +1071,7 @@ corona_kimutatas = corona_latest.groupby('Country/Region').agg(
 corona_kimutatas
 ```
 
-Azt látjuk, hogy az átlag és medián értékek mind az aktív esetek számár, mind a halálozási számokra megegyeznek. Ez azért van, mert a legtöbb ország ugyebár nem volt lebontva államokra és provinciákra, szóval egy nap csak egy érték érkezett a táblába rájuk mindenből. Egy értéknek pedig nyilván ugyan az az átlaga és a mediánja is! :)
+Azt látjuk, hogy az átlag és medián értékek mind az aktív esetek számára, mind a halálozási számokra megegyeznek. Ez azért van, mert a legtöbb ország ugyebár nem volt lebontva államokra és provinciákra, szóval egy nap csak egy érték érkezett a táblába rájuk mindenből. Egy értéknek pedig nyilván ugyan az az átlaga és a mediánja is! :)
 
 Na, de lessünk meg pár olyan országot, ahol az adatok belső régiókra, provinciákra is le voltak bontva. Pl. Franciaország és az Egyesült Királyság ilyen országok voltak:
 
@@ -1131,7 +1131,7 @@ population = pd.read_csv('population_by_country_2020.csv')
 population.info()
 ```
 
-A **population** dataframe-ből csak az országnév, népesség, népsűrűség és városi népesség aránya változókrra lesz szükségünk.<br>
+A **population** dataframe-ből csak az országnév, népesség, népsűrűség és városi népesség aránya változókra lesz szükségünk.<br>
 A többit törölhetjük is a data frame-ből! Mivel az oszlopnevekben mint fentebb láthatjuk elég sok a hányadék módon speciális karakter, így biztonságosabb most az oszlopokra a sorszámukkal hivatkozni. Láthatjuk az `info` metódus eredményéből, hogy a szükséges országnév, népesség, népsűrűség és városi népesség aránya oszlopok rendre a $0,1,4,9$ indexekkel bírnak.
 
 ```{python}
@@ -1231,14 +1231,14 @@ A különböző típusú összekötési módokat remekül lehet halmazábrákkal
 </center>
 
 
-Na, akkor mielőtt a tényleges `merge`-hez hozzálátunk, annyit ellenőrizzünk le, hogy ugyan az-e a neve az országneveket tartalmazó oszlopnak mindkét data frame-ben, a **population**ben és a **corona_country**-ban is:
+Na, akkor mielőtt a tényleges `merge`-hez hozzálátunk, annyit ellenőrizzünk le, hogy ugyanaz-e a neve az országneveket tartalmazó oszlopnak mindkét data frame-ben, a **population**ben és a **corona_country**-ban is:
 
 ```{python}
 corona_country.columns
 population.columns
 ```
 
-Szuper, mindkét táblában egységesen **'Country'** az összekötésre használandó oszlop neve! Nem meglepő, mert mindkáét táblában átneveztük már korábban az oszlopokat, de azért jobb biztosra menni. :)
+Szuper, mindkét táblában egységesen **'Country'** az összekötésre használandó oszlop neve! Nem meglepő, mert mindkét táblában átneveztük már korábban az oszlopokat, de azért jobb biztosra menni. :)
 
 Akkor lássuk azt a `merge`-t! Most egy olyan összekötést csinálunk, hogy a **corona_country** táblában lévő összes sorunk maradjon meg az összekötött táblában, mert alapvetően azok az országok érdekelnek, ahol megvan a COVID fertőzöttek száma. Ez az én data frame megadási sorrendben majd egy *left join*t fog jelenteni. :)
 
@@ -1280,7 +1280,7 @@ population.Country[population.Country.str.contains("Czech Republic|Taiwan|United
 Hát valami hasonló módon be kéne lőni a maradék 16 nem egyező országnevet is, de most ezzel nem húzzuk a drága időnket, hanem javítjuk ezt a 3 esetet és újra összekötjük a tábláinkat.<br>
 Aki a nem egyértelmű kapcsoló oszlop (kulcs) alapján történő data frame összekötés világában szeretne elmélyedni, neki érdemes lehet majd előbb-utóbb utána néznie a *fuzzy join* technikáknak, amiket a Pythonban pl. a [difflib csomag támogat](https://stackoverflow.com/questions/13636848/is-it-possible-to-do-fuzzy-match-merge-with-python-pandas). De ezek a megoldások az itteni bevezető példának a kereteit bőven megugorják komplexitásban.
 
-Szóval, akkor a 3 azonosított eltérő orszáégnevet javítsuk a **population** data frame-ben. Azaz ott átírjuk ezeket az országneveket arra a verzióra, ami a **corona_country**-ban is szerepel. Ehhez megint az `str.replace`-t hazsnáljuk, mint anno az **UrbanPop** oszlop százalékjeleinek eltávolításakor. Ezt mindhárom esetben külön meg kell sajnos tenni.
+Szóval, akkor a 3 azonosított eltérő országnevet javítsuk a **population** data frame-ben. Azaz ott átírjuk ezeket az országneveket arra a verzióra, ami a **corona_country**-ban is szerepel. Ehhez megint az `str.replace`-t használjuk, mint anno az **UrbanPop** oszlop százalékjeleinek eltávolításakor. Ezt mindhárom esetben külön meg kell sajnos tenni.
 
 ```{python}
 population['Country'] = population['Country'].replace('United States', 'US')
@@ -1318,7 +1318,7 @@ Az ábra alapján nagyjából olyan 3000 feletti értékek tűnnek extrém módo
 
 Rendezzük a **COVID_perMillion** szerint csökkenő sorrendbe a data frame-t, és kérjük le a sorbarendezett verzióból azokat az értékeket, ahol a **COVID_perMillion** nagyobb, mint 3000!
 
-A data frame-t sorbe rendezni a `sort_values` metódussal lehet, amelynek paraméterében meg kell adni, hogy mely oszlop alapján rendezünk, és hogy a sorrend csökkenő vagy növekvő-e. Majd ezen a rendezett állapoton elsüthetünk pl. egy iloc-ot az első 10 sor kiválasztásához.
+A data frame-t sorba rendezni a `sort_values` metódussal lehet, amelynek paraméterében meg kell adni, hogy mely oszlop alapján rendezünk, és hogy a sorrend csökkenő vagy növekvő-e. Majd ezen a rendezett állapoton elsüthetünk pl. egy iloc-ot az első 10 sor kiválasztásához.
 
 ```{python}
 corona_extended.sort_values('COVID_perMillion', ascending=False).loc[corona_extended['COVID_perMillion'] > 3000,:]
@@ -1326,7 +1326,7 @@ corona_extended.sort_values('COVID_perMillion', ascending=False).loc[corona_exte
 
 Na, úgy néz ki, hogy az érintett országok töbségében ilyen jó kicsi, zsúfolt államok. Persze vannak extrém kivételek, pl. ugye az olaszok a nagy repülős turistaforgalmuk miatt.
 
-Na, ezeket az extrém módon kilógó értékeket kipucoljuk a data frame-ből, aztá ránézünk újra a **COVID_perMillion** doboz ábrájára. Most a kilógó értékeket vegyük csak  a 4000 feletti esetszámoknak, mivel a sorrend alapján van egy nagyobb ugrás ott a svájci 3418-ról az ír 4174-re. Meg a doboz ábrán is látszik, hogy ez az utolsó 3 érték ebben a "toplistában" még azért közelebb van az adatok "természetes folytatásához", és utána jön még egy ugrás az egymillió főre vetített esetszámokban.
+Na, ezeket az extrém módon kilógó értékeket kipucoljuk a data frame-ből, aztán ránézünk újra a **COVID_perMillion** doboz ábrájára. Most a kilógó értékeket vegyük csak  a 4000 feletti esetszámoknak, mivel a sorrend alapján van egy nagyobb ugrás ott a svájci 3418-ról az ír 4174-re. Meg a doboz ábrán is látszik, hogy ez az utolsó 3 érték ebben a "toplistában" még azért közelebb van az adatok "természetes folytatásához", és utána jön még egy ugrás az egymillió főre vetített esetszámokban.
 
 ```{python}
 corona_extended = corona_extended[corona_extended['COVID_perMillion'] < 4000]
